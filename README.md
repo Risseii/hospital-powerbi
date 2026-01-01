@@ -32,18 +32,18 @@ Implementación de un Esquema de Estrella (Star Schema), facilitando la escalabi
 oferta de citas no se traduce en atención real.
 - **Impacto Financiero:** Top 5 de recaudación total por especialidad.
 ## 7. 🚀 Insights de negocio
-- 📌 Se identificó un comportamiento en el Top 3 de especialidades con mayor tiempo de espera:
+- 📌 **Se identificó un comportamiento en el Top 3 de especialidades con mayor tiempo de espera:**
   + La primera (dermatología pediátrica) y tercera especialidad (neurología pediátrica) con mayor espera registran un 100% de inasistencia.
   + La segunda especialidad en espera (Medicina Física) registra un 98.1% de inasistencia.
-- 📌 Alerta en Medicina Física y Rehabilitación: Esta especialidad presenta una situación crítica con una tasa de inasistencia del 98.10%
+- 📌 **Alerta en Medicina Física y Rehabilitación:** Esta especialidad presenta una situación crítica con una tasa de inasistencia del 98.10%
 (17,332 pacientes perdidos). Además, se encuentra en el Top 3 de espera con un promedio de 43 días, sugiriendo que la larga espera
 desincentiva la asistencia final.
-- 📌 Anomalías en Especialidades Pediátricas: Dermatología Pediátrica y otras 17 áreas (incluyendo Nutrición y Salud Mental) registraron una
+- 📌 **Anomalías en Especialidades Pediátricas:** Dermatología Pediátrica y otras 17 áreas (incluyendo Nutrición y Salud Mental) registraron una
 inasistencia del 100%. En el caso de dermatología pediátrica, el tiempo de espera promedio alcanza los 59 días.
-- 📌 Anomalía en dermatología pediátrica: Se detectó un patrón de inasistencia el día 31 de enero de 2023, donde el 100% de los pacientes
+- 📌 **Anomalía en dermatología pediátrica:** Se detectó un patrón de inasistencia el día 31 de enero de 2023, donde el 100% de los pacientes
 (14 citas) programados específicamente los martes no asistieron. Este hallazgo sugiere una desconexión operativa, como un error en la comunicación de la disponibilidad del especialista o un cierre administrativo no registrado en el sistema de citas, resultando en una
 pérdida total de eficiencia para ese turno.
-- 📌 Rendimiento Financiero: A pesar de los problemas de asistencia, las especialidades de Oftalmología, Psiquiatría y Cardiología lideran
+- 📌 **Rendimiento Financiero:** A pesar de los problemas de asistencia, las especialidades de Oftalmología, Psiquiatría y Cardiología lideran
 la recaudación, consolidándose como los pilares económicos del hospital durante el periodo analizado.
 ## 8. 📊 Previsualización del dashboard
 - Página 1: Resumen ejecutivo del desempeño hospitalario.
