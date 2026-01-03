@@ -1,67 +1,69 @@
-# Análisis de desempeño hospitalario: Hospital María Auxiliadora (2023)
+# Hospital Performance Analysis: María Auxiliadora Hospital (2023)
 
-## 1. Introducción
-Este proyecto presenta un análisis de la gestión de citas médicas en el Hospital María Auxiliadora. El objetivo principal es transformar datos en información estratégica para optimizar la gestión hospitalaria y mejorar la calidad de atención al paciente mediante el monitoreo de indicadores clave (KPIs).
-## 2. 🔍 El problema
-El Hospital María Auxiliadora tiene un serio problema de citas perdidas: muchos pacientes reservan una cita, pero no llegan a la consulta. Actualmente, hay consultorios que están operando vacíos porque nadie asiste, lo que genera una gran pérdida de tiempo médico, mientras que otros pacientes siguen esperando semanas para ser atendidos.
+## 1. Introduction
+This project presents an analysis of medical appointment management at María Auxiliadora Hospital. The main objective is to transform data into strategic information to optimize hospital management and improve the quality of patient care by monitoring key performance indicators (KPIs).
+## 2. 🔍 The problem
+María Auxiliadora Hospital has a serious problem with missed appointments: many patients book an appointment but do not show up for their consultation. Currently, some consultation rooms are operating empty because no one attends, which results in a significant loss of medical time, while other patients continue to wait weeks to be seen.
 
-**Preguntas clave de negocio:**
-- ¿Qué especialidades presentan los mayores cuellos de botella en tiempos de espera?
-- ¿Qué áreas requieren una intervención inmediata para reducir el abandono de citas?
-- ¿Existe un perfil asociado a las mayores tasas de inasistencia?
-- ¿Cuáles son las especialidades que recaudan más?
-## 3. 🛠️ Stack Tecnológico
-- **Herramienta de BI:** Power BI Desktop.
-- **Origen de Datos:** Excel.
-- **DAX:** Para el cálculo de medidas.
-## 4. 🔄 Procesamiento de Datos (ETL) 
-- **Limpieza:** Eliminación de registros duplicados y depuración de columnas irrelevantes para optimizar el peso del modelo.
-- **Inteligencia de Tiempo:** Creación de una tabla calendario, diseñada para analizar las tendencias específicas del periodo 2023.
-## 5. ⚙️ Modelado de datos
-Implementación de un Esquema de Estrella (Star Schema), facilitando la escalabilidad y velocidad de las consultas.
-- **Tabla de Hechos (Fact_Citas):** Contiene los eventos de citas, costos y el estado de atención.
-- **Dimensiones:**
-  - Dim_Calendario: Para análisis de tendencias temporales (mes, día de la semana).
-  - Dim_Especialidad: Atributos de las unidades médicas.
-  - Dim_Paciente: Datos demográficos.
-## 6. 📊 Indicadores Clave (KPIs)
-- **Eficiencia de Asistencia:** Tasa de asistencia vs. inasistencia.
-- **Volumen de Pacientes:** Total de atenciones segmentadas por género.
-- **Oportunidad de Atención:** Tiempo promedio de espera (días) desde la solicitud hasta la cita.
-- **Tasa de inasistencia por especialidad:** Análisis de especialidades con Tasa de Inasistencia del 100%, permitiendo detectar áreas donde la
-oferta de citas no se traduce en atención real.
-- **Impacto Financiero:** Top 5 de recaudación total por especialidad.
-## 7. 🚀 Insights de negocio
-- 📌 **Se identificó un comportamiento en el Top 3 de especialidades con mayor tiempo de espera:**
-  + La primera (dermatología pediátrica) y tercera especialidad (neurología pediátrica) con mayor espera registran un 100% de inasistencia.
-  + La segunda especialidad en espera (Medicina Física) registra un 98.1% de inasistencia.
-- 📌 **Alerta en Medicina Física y Rehabilitación:** Esta especialidad presenta una situación crítica con una tasa de inasistencia del 98.10%
-(17,332 pacientes perdidos). Además, se encuentra en el Top 3 de espera con un promedio de 43 días, sugiriendo que la larga espera
-desincentiva la asistencia final.
-- 📌 **Anomalías en Especialidades Pediátricas:** Dermatología Pediátrica y otras 17 áreas (incluyendo Nutrición y Salud Mental) registraron una
-inasistencia del 100%. En el caso de dermatología pediátrica, el tiempo de espera promedio alcanza los 59 días.
-- 📌 **Anomalía en dermatología pediátrica:** Se detectó un patrón de inasistencia el día 31 de enero de 2023, donde el 100% de los pacientes
-(14 citas) programados específicamente los martes no asistieron. Este hallazgo sugiere una desconexión operativa, como un error en la comunicación de la disponibilidad del especialista o un cierre administrativo no registrado en el sistema de citas, resultando en una
-pérdida total de eficiencia para ese turno.
-- 📌 **Rendimiento Financiero:** A pesar de los problemas de asistencia, las especialidades de Oftalmología, Psiquiatría y Cardiología lideran
-la recaudación, consolidándose como los pilares económicos del hospital durante el periodo analizado.
-## 8. 📊 Previsualización del dashboard
-- Página 1: Resumen ejecutivo del desempeño hospitalario.
-  <img width="1600" height="900" alt="Dashboard Hospital Maria Auxiliadora" src="https://github.com/user-attachments/assets/27bcd110-5bc5-4e47-b66f-2c3298d7da28" />
-- Página 2: Más análisis.
-  <img width="1920" height="1080" alt="Dashboard Hospital Maria Auxiliadora (1)" src="https://github.com/user-attachments/assets/4bd2ce63-7504-4d4c-b1db-21a97f1780a3" />
-## 9. Conclusiones y Recomendaciones
-- **Intervención en casos críticos:** Se identificó que el problema de tiempos de espera extremos (superiores a 36 días) está concentrado en
-tres especialidades: Dermatología pediátrica, Medicina Física y Rehabilitación y neurología pediátrica. Se recomienda una auditoría en
-estas áreas para determinar si el retraso se debe a falta de personal médico, a una sobreoferta de citas u otro motivo.
-- **Sistema de Recordatorios:** Implementar alertas (SMS/WhatsApp) específicamente en las 18 especialidades que presentan abandono total
-y en la especialidad de Medicina Física y Rehabilitación.
-- **Sincronización de agendas médicas:** Es necesario auditar las especialidades con inasistencia perfecta en periodos específicos para
-asegurar que los horarios del sistema de citas coincidan con la disponibilidad real de los médicos, evitando así que los pacientes
-ocupen cupos en días que el servicio no está operativo.
-- **Optimización de Recursos:** Reasignar el personal de especialidades con 100% de inasistencia hacia áreas de mayor demanda y recaudación, maximizando así el uso de la infraestructura hospitalaria.
-## 10. Limitaciones
-Durante el desarrollo del proyecto, se identificó una discrepancia en la columna Atendido:
-El dataset define el campo con valores Sí o No; sin embargo, en el diccionario de datos se describe el campo como Vino o No Vino (Asistencia).
-- **Impacto en el Análisis:** Existe una brecha de interpretación entre la responsabilidad del paciente (no asistir a la cita) y la gestión hospitalaria (el paciente asistió, pero no fue atendido por falta de médico, tiempo o insumos).
-- **Decisión Técnica:** Para efectos de este dashboard, se ha asumido el campo como Asistencia. Sin embargo, se recomienda estandarizar este campo en el origen para diferenciar la inasistencia.
+**Key business questions:**
+- Which specialties have the biggest bottlenecks in waiting times?
+- Which areas require immediate intervention to reduce appointment abandonment?
+- Is there a profile associated with the highest rates of non-attendance?
+- Which specialties generate the most revenue?
+## 3. 🛠️ Technology Stack
+- **BI tool:** Power BI Desktop.
+- **Data source:** Excel.
+- **DAX:** For calculating measures.
+## 4. 🔄 Data Processing (ETL)
+- **Cleaning:** Removal of duplicate records and purging of irrelevant columns to optimize model weight.
+- **Time Intelligence:** Creation of a calendar table, designed to analyze specific trends for the 2023 period.
+## 5. ⚙️ Data Modeling
+Implementation of a Star Schema, facilitating scalability and query speed.
+- **Fact Table (Fact_Appointments):** Contains appointment events, costs, and care status.
+- **Dimensions:**
+  - Dim_Calendar: For analysis of temporal trends (month, day of the week).
+  - Dim_Specialty: Attributes of medical units.
+  - Dim_Patient: Demographic data.
+## 6. 📊 Key Performance Indicators (KPIs)
+- **Care Efficiency:** Attendance rate vs. no-show rate.
+- **Patient Volume:** Total number of visits segmented by gender.
+- **Timeliness of Care:** Average waiting time (days) from request to appointment.
+- **No-show rate by specialty:** Analysis of specialties with a 100% no-show rate, allowing for the detection of areas where the
+availability of appointments does not translate into actual care.
+- **Financial Impact:** Top 5 total revenue by specialty.
+## 7. 🚀 Business Insights
+- 📌 **A pattern was identified in the top 3 specialties with the longest wait times:**
+  + The first (pediatric dermatology) and third (pediatric neurology) specialties with the longest wait times have a 100% no-show rate.
+  + The second specialty with the longest wait (physical medicine) has a 98.1% no-show rate.
+- 📌 **Alert in physical medicine and rehabilitation:** This specialty is in a critical situation with a no-show rate of 98.10%
+(17,332 patients lost). In addition, it is in the Top 3 in terms of waiting time with an average of 43 days, suggesting that the long wait
+discourages final attendance.
+- 📌 **Anomalies in Pediatric Specialties:** Pediatric Dermatology and 17 other areas (including Nutrition and Mental Health) recorded a
+100% non-attendance rate. In the case of pediatric dermatology, the average waiting time is 59 days.
+- 📌 **Anomaly in pediatric dermatology:** A pattern of non-attendance was detected on January 31, 2023, where 100% of patients
+(14 appointments) scheduled specifically on Tuesdays did not attend. This finding suggests an operational disconnect, such as an error in communicating the specialist's availability or an administrative closure not recorded in the appointment system, resulting in a
+total loss of efficiency for that shift.
+- 📌 **Financial Performance:** Despite attendance issues, the specialties of Ophthalmology, Psychiatry, and Cardiology lead
+in revenue, consolidating themselves as the economic pillars of the hospital during the period analyzed.
+## 8. 📊 Dashboard preview
+- Page 1: Executive summary of hospital performance.
+  <img width="1600" height="900" alt="Maria Auxiliadora Hospital Dashboard" src="https://github.com/user-attachments/assets/27bcd110-5bc5-4e47-b66f-2c3298d7da28" />
+- Page 2: Further analysis.
+  <img width="1920" height="1080" alt="Maria Auxiliadora Hospital Dashboard (1)" src="https://github.com/user-attachments/assets/4bd2ce63-7504-4d4c-b1db-21a97f1780a3" />
+
+## 9. Conclusions and Recommendations
+- **Intervention in critical cases:** It was identified that the problem of extreme waiting times (greater than 36 days) is concentrated in
+three specialties: pediatric dermatology, physical medicine and rehabilitation, and pediatric neurology. An audit is recommended in
+these areas to determine whether the delay is due to a lack of medical staff, an oversupply of appointments, or another reason.
+- **Reminder System:** Implement alerts (SMS/WhatsApp) specifically in the 18 specialties with total abandonment
+and in the specialty of Physical Medicine and Rehabilitation.
+- **Synchronization of Medical Schedules:** It is necessary to audit specialties with perfect attendance during specific periods to
+ensure that the appointment system schedules coincide with the actual availability of physicians, thus preventing patients from
+occupying slots on days when the service is not operational.
+- **Resource optimization:** Reassign staff from specialties with 100% non-attendance to areas of greater demand and revenue, thus maximizing the use of hospital infrastructure.
+  
+## 10. Limitations
+During the development of the project, a discrepancy was identified in the Attended column:
+The dataset defines the field with Yes or No values; however, in the data dictionary, the field is described as Came or Did Not Come (Attendance).
+- **Impact on Analysis:** There is an interpretation gap between patient responsibility (not attending the appointment) and hospital management (the patient attended but was not seen due to lack of doctor, time, or supplies).
+- **Technical Decision:** For the purposes of this dashboard, the field has been assumed to be Attendance. However, it is recommended that this field be standardized at the source to differentiate non-attendance.
