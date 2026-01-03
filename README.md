@@ -1,5 +1,7 @@
 # Hospital Performance Analysis: María Auxiliadora Hospital (2023)
 
+[![Español](https://img.shields.io/badge/Leer%20en-Español-71bcf0?style=for-the-badge&logo=es-spain&logoColor=white)](README-es.md)
+
 ## 1. Introduction
 This project presents an analysis of medical appointment management at María Auxiliadora Hospital. The main objective is to transform data into strategic information to optimize hospital management and improve the quality of patient care by monitoring key performance indicators (KPIs).
 ## 2. 🔍 The problem
