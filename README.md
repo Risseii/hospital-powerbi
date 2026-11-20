@@ -52,11 +52,14 @@ Implementation of a Star Schema, facilitating scalability and query speed.
 
 ## 8. 📊 Dashboard preview
 - **Page 1, Performance:** Executive summary with the four KPIs and the ranking of specialties with the highest no-show rate. A button switches to the specialties with no recorded attendance.
-  <img width="1600" height="900" alt="Maria Auxiliadora Hospital Dashboard" src="https://github.com/user-attachments/assets/27bcd110-5bc5-4e47-b66f-2c3298d7da28" />
+<img width="2175" height="1227" alt="Executive summary" src="https://github.com/user-attachments/assets/762a8656-f573-478d-b483-17103838850e" />
+
 - **Page 2, Value by specialty:** Specialties with the longest waits, the relationship between waiting time and no-show, and the top specialties by revenue.
-  <img width="1920" height="1080" alt="Maria Auxiliadora Hospital Dashboard (1)" src="https://github.com/user-attachments/assets/4bd2ce63-7504-4d4c-b1db-21a97f1780a3" />
+<img width="2184" height="1221" alt="Specialties" src="https://github.com/user-attachments/assets/246a6f6b-876e-4122-adfe-90a264a5cdd3" />
+
 - **Page 3, Specialty detail (drillthrough):** Right click on a specialty and choose "Drill through" to see its KPIs, its monthly no-show rate and its no-show rate by day of the week, each compared with the hospital average. The month filter selected on page 1 is kept.
-  <!-- Add the Page 3 image here -->
+ <img width="1311" height="1227" alt="detail" src="https://github.com/user-attachments/assets/f4df6d73-ee9e-44e0-9051-dcac05560a82" />
+
 
 ## 9. Conclusions and Recommendations
 - **Intervention in critical cases:** Long waiting times are concentrated in a few specialties, led by Physical Medicine and Rehabilitation (43 days) and Pediatric Dermatology (59 days). An audit is recommended in these areas to determine whether the delay is due to a lack of medical staff, an oversupply of appointments, or another reason.
