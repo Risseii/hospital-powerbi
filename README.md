@@ -68,5 +68,4 @@ Implementation of a Star Schema, facilitating scalability and query speed.
 - **Meaning of the Attended field:** The dataset defines the field with Yes or No values; however, in the data dictionary, the field is described as Came or Did Not Come (Attendance).
   - **Impact on Analysis:** There is an interpretation gap between patient responsibility (not attending the appointment) and hospital management (the patient attended but was not seen due to lack of doctor, time, or supplies).
   - **Technical Decision:** For the purposes of this dashboard, the field has been assumed to be Attendance. However, it is recommended that this field be standardized at the source to differentiate non-attendance.
-- **Data quality in the source:** The source includes test records (specialty ZPRUEBA, 2 appointments) and some specialty names with extra spaces. These were kept as they come from the source and are pending cleanup in Power Query. The specialty counts in this README exclude ZPRUEBA.
-- **Ranking threshold:** The minimum of 100 appointments to enter the rankings is an analytical decision to avoid unreliable rates, not a rule from the hospital.
+- **Ranking threshold:** The minimum of 100 appointments to enter the rankings is an analytical decision to avoid unreliable rates.
