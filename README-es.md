@@ -68,5 +68,4 @@ Implementación de un Esquema de Estrella (Star Schema), facilitando la escalabi
 - **Significado del campo Atendido:** El dataset define el campo con valores Sí o No; sin embargo, en el diccionario de datos se describe el campo como Vino o No Vino (Asistencia).
   - **Impacto en el Análisis:** Existe una brecha de interpretación entre la responsabilidad del paciente (no asistir a la cita) y la gestión hospitalaria (el paciente asistió, pero no fue atendido por falta de médico, tiempo o insumos).
   - **Decisión Técnica:** Para efectos de este dashboard, se ha asumido el campo como Asistencia. Sin embargo, se recomienda estandarizar este campo en el origen para diferenciar la inasistencia.
-- **Calidad de datos en el origen:** El origen incluye registros de prueba (especialidad ZPRUEBA, 2 citas) y algunos nombres de especialidad con espacios de más. Se mantuvieron tal como vienen del origen y su limpieza en Power Query está pendiente. Los conteos de especialidades de este README excluyen ZPRUEBA.
 - **Umbral de los rankings:** El mínimo de 100 citas para entrar en los rankings es una decisión analítica para evitar tasas poco confiables, no una regla del hospital.
