@@ -52,11 +52,13 @@ Implementación de un Esquema de Estrella (Star Schema), facilitando la escalabi
 
 ## 8. 📊 Previsualización del dashboard
 - **Página 1, Desempeño:** Resumen ejecutivo con los cuatro KPIs y el ranking de especialidades con mayor inasistencia. Un botón cambia a las especialidades sin asistencia registrada.
-  <img width="1600" height="900" alt="Dashboard Hospital Maria Auxiliadora" src="https://github.com/user-attachments/assets/27bcd110-5bc5-4e47-b66f-2c3298d7da28" />
+<img width="2175" height="1227" alt="Dashboard Hospital Maria Auxiliadora" src="https://github.com/user-attachments/assets/92080542-81b1-47e8-a3bf-669b5de59de5" />
+
 - **Página 2, Valor por especialidad:** Especialidades con mayor espera, relación entre espera e inasistencia y especialidades con mayor recaudación.
-  <img width="1920" height="1080" alt="Dashboard Hospital Maria Auxiliadora (1)" src="https://github.com/user-attachments/assets/4bd2ce63-7504-4d4c-b1db-21a97f1780a3" />
+<img width="2184" height="1221" alt="Valor por especialidad" src="https://github.com/user-attachments/assets/37b1dfa4-042d-4994-aff0-42b2cd186977" />
+
 - **Página 3, Detalle de especialidad (obtener detalles):** Clic derecho sobre una especialidad y "Obtener detalles" para ver sus KPIs, su inasistencia mensual y su inasistencia por día de la semana, comparadas con el promedio del hospital. Se mantiene el filtro de mes elegido en la página 1.
-  <!-- Agregar aquí la imagen de la Página 3 -->
+<img width="1311" height="1227" alt="Detalle" src="https://github.com/user-attachments/assets/e98e4a5b-ad23-4b99-9690-6dd0e0f2fbc5" />
 
 ## 9. Conclusiones y Recomendaciones
 - **Intervención en casos críticos:** Los tiempos de espera largos se concentran en pocas especialidades, encabezadas por Medicina Física y Rehabilitación (43 días) y Dermatología Pediátrica (59 días). Se recomienda una auditoría en estas áreas para determinar si el retraso se debe a falta de personal médico, a una sobreoferta de citas u otro motivo.
